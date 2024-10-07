@@ -11,19 +11,28 @@ div.parent {
     display: flex;
     justify-content: center; /* Horizontally centers the div */
     align-items: center;     /* Vertically centers the div */
-    height: 100vh;           /* Full height of the viewport */
-     /* You can use any background color */   
+    height: 100vh;           /* Full height of the viewport */ 
+    width: 100vw;            /* Full width of the viewport */
+    margin: 0 auto;
+    padding: 0 auto;
 }
 
 div.child {
     padding: 30px;
     background-color: hsl(30, 54%, 98%);
     border-radius: 13px;
+    /*width: 45%;  /* Width of the content */
+    max-width: 650px;  /* Max width to prevent overflow */
+    margin: 0 auto;
 }
 
-img.image {
+
+/* The content is here */
+.image {
     border-radius: 13px;
     margin-bottom:  20px;
+    width: 100%;
+
 }
 
 .Heading {
@@ -39,4 +48,9 @@ img.image {
     font-family: "Outfit", system-ui;
     font-weight: 400;
     font-style: normal;
-  }
+    font-size: 16px;
+}
+
+.Preparation{
+    background-color: hsl(330, 100%, 98%);
+}
