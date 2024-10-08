@@ -11,10 +11,12 @@ div.parent {
     display: flex;
     justify-content: center; /* Horizontally centers the div */
     align-items: center;     /* Vertically centers the div */
-    height: 100vh;           /* Full height of the viewport */ 
+    /* Full height of the viewport */ 
     width: 100vw;            /* Full width of the viewport */
     margin: 0 auto;     /* Center the div */   /* Also make sure that the div doesnt go to the edge whenever we change the size*/
     padding: 0 auto;    /* Center the div */ /* Also make sure that the div doesnt go to the edge whenever we change the size*/
+    padding-top: 50px;  /* Space from the top */
+    padding-bottom: 50px; /* Space from the bottom */
 }
 
 div.child {
@@ -24,6 +26,7 @@ div.child {
     /*width: 45%;  /* Width of the content */
     max-width: 650px;  /* Max width to prevent overflow */
     margin: 0 auto;
+    
 }
 
 
@@ -36,7 +39,7 @@ div.child {
 
 .Heading {
     font-family: 'Young Serif', sans-serif;
-    color: hsl(30, 54%, 20%);
+    color: hsl(14, 45%, 36%);
     font-weight: 400;
 }
 #SimpleOmeletteRecipe {
@@ -50,7 +53,7 @@ div.child {
     font-size: 16px;
 }
 
-
+/*
 /* Preparation Time */
 .Preparation{
     background-color: hsl(330, 100%, 98%);
@@ -97,13 +100,14 @@ div.child {
 }
 .Ingredients ul ::marker { /* Change the bullet style, this also works for numbers etc. */
     font-size: 12px;
-    color: hsl(30, 54%, 20%)
+    color: hsl(14, 45%, 36%);
 }
 
 
 /* INSTRUCTIONS */
 .Instructions {
     margin-top: 20px;
+    margin-bottom: 20px;
  }   /* Heading */
 .Instructions h2{
     margin-bottom: 10px;
@@ -119,6 +123,39 @@ div.child {
     padding-left: 15px; /* Space between bullet and text */
 }
 .Instructions ol ::marker { /* Change the bullet style, this also works for numbers etc. */
-    color: hsl(30, 54%, 20%);
+    color: hsl(14, 45%, 36%);
     font-weight: bold;
+}
+
+
+/* NUTRITION */
+.Nutrition {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}   /* Heading */
+.Nutrition h2{
+    margin-bottom: 10px;
+}
+.Nutrition #table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.tablespoon {
+    padding: 10px;
+    padding-left: 30px;
+    border-bottom-width: 0.5px;
+    border-bottom-style: solid;
+    border-bottom-color: hsl(30, 18%, 87%);
+    text-align: left;
+    font-size: 16px;
+    color: hsl(14, 45%, 36%);
+}
+.fat{
+    border-bottom: 0px;
+}
+.amount {
+    font-weight: bolder;
 }
