@@ -104,6 +104,9 @@ div.child {
 /* INSTRUCTIONS */
 .Instructions {
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
  }   /* Heading */
 .Instructions h2{
     margin-bottom: 10px;
@@ -111,14 +114,13 @@ div.child {
 .Instructions ol {
     padding-left: 4%;
     font-size: 16px;
-    text-indent: 10px;  /* Indent the text from the bullet*/
+      /* Indent the text from the bullet*/
     color: hsl(30, 10%, 34%);
     list-style-position: outside ;
 }
 .Instructions ol li {
     margin-bottom: 10px; /* Space between items */
-     /* Indent the text from the bullet*/;
-     
+    padding-left: 4px;
 }
 .Instructions ol ::marker { /* Change the bullet style, this also works for numbers etc. */
     color: hsl(30, 54%, 20%);
@@ -127,7 +129,6 @@ div.child {
 .Instructions ol li p {
         margin: 0; /* Remove default margin */
         padding-left: 10px; /* Add padding for the text */
-        text-indent: -10px; /* Pulls text back towards the left for better alignment */
-        position: relative; /* Allow positioning adjustments */
+      /* Allow positioning adjustments */
     
 }
