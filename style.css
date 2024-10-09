@@ -1,10 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
+html body {
     background-color: hsl(30, 54%, 90%);
+    overflow-x: hidden;
 }
 
 div.parent {
@@ -12,7 +14,7 @@ div.parent {
     justify-content: center; /* Horizontally centers the div */
     align-items: center;     /* Vertically centers the div */
     /* Full height of the viewport */ 
-    width: 100vw;            /* Full width of the viewport */
+    width: 100%;            /* Full width of the viewport */
     margin: 0 auto;     /* Center the div */   /* Also make sure that the div doesnt go to the edge whenever we change the size*/
     padding: 0 auto;    /* Center the div */ /* Also make sure that the div doesnt go to the edge whenever we change the size*/
     padding-top: 100px;  /* Space from the top */
@@ -34,6 +36,7 @@ div.child {
     border-radius: 13px;
     margin-bottom:  20px;
     width: 100%;/* Make sure the image is always wihtin the parent div and is responsive */
+    max-width: 100%;
 }
 
 .Heading {
@@ -83,6 +86,9 @@ div.child {
 /* INGREDIENTS */
 .Ingredients{
     padding-bottom: 20px;
+    border-bottom-width: 0.5px;
+    border-bottom-style: solid;
+    border-bottom-color: hsl(30, 18%, 87%);
  }   /* Heading */
 .Ingredients h2{
     margin-bottom: 10px;
@@ -107,6 +113,10 @@ div.child {
 .Instructions {
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom-width: 0.5px;
+    border-bottom-style: solid;
+    border-bottom-color: hsl(30, 18%, 87%);
  }   /* Heading */
 .Instructions h2{
     margin-bottom: 10px;
@@ -159,6 +169,41 @@ div.child {
     font-weight: bolder;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1500px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: hsl(30, 54%, 90%);
+        overflow-x: hidden;
+    }
+    div.parent {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: center; /* Horizontally centers the div */
+        align-items: center;
+        width: 100%;            /* Full width of the viewport */
+        }
     
+    div.child {
+        padding: 0px;
+        background-color: hsl(30, 54%, 98%);
+        border-radius: 0%;
+        width: 100%;;  /* Width of the content */
+        max-width: 100%;  /* Max width to prevent overflow */
+        margin-left: 0%; /* Center the div */ 
+    }
+    .image   {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 0px;
+    }
+    .belowImage  {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
 }
