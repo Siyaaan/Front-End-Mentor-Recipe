@@ -86,16 +86,19 @@ div.child {
 /* INGREDIENTS */
 .Ingredients{
     padding-bottom: 20px;
-    border-bottom-width: 0.5px;
-    border-bottom-style: solid;
-    border-bottom-color: hsl(30, 18%, 87%);
+    
  }   /* Heading */
 .Ingredients h2{
     margin-bottom: 10px;
     margin-top: 10px;
 }   /* Body */
 .Ingredients ul {
-    padding-left: 4%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    border-bottom-width: 0.5px;
+    border-bottom-style: solid;
+    border-bottom-color: hsl(30, 18%, 87%);
     font-size: 16px;
     text-indent: 10px;  /* Indent the text from the bullet*/
     color: hsl(30, 10%, 34%);
@@ -114,15 +117,18 @@ div.child {
     margin-top: 20px;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom-width: 0.5px;
-    border-bottom-style: solid;
-    border-bottom-color: hsl(30, 18%, 87%);
+
  }   /* Heading */
 .Instructions h2{
     margin-bottom: 10px;
 }
 .Instructions ol {
-    padding-left: 4%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    border-bottom-width: 0.5px;
+    border-bottom-style: solid;
+    border-bottom-color: hsl(30, 18%, 87%);
     font-size: 16px;
     color: hsl(30, 10%, 34%);
     list-style-position: outside ; /* Place the bullet outside the text  */
@@ -155,6 +161,7 @@ div.child {
 .tablespoon {
     padding: 10px;
     padding-left: 30px;
+    padding-right: 30px;
     border-bottom-width: 0.5px;
     border-bottom-style: solid;
     border-bottom-color: hsl(30, 18%, 87%);
@@ -190,7 +197,7 @@ div.child {
         }
     
     div.child {
-        padding: 0px;
+        
         background-color: hsl(30, 54%, 98%);
         border-radius: 0%;
         width: 100%;;  /* Width of the content */
@@ -203,7 +210,7 @@ div.child {
         border-radius: 0px;
     }
     .belowImage  {
-        padding-left: 35px;
-        padding-right: 35px;
+        padding-right: 30px;
+        padding-left: 30px;
     }
 }
