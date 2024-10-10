@@ -197,7 +197,7 @@ div.child {
         }
     
     div.child {
-        
+        padding: 0%;
         background-color: hsl(30, 54%, 98%);
         border-radius: 0%;
         width: 100%;;  /* Width of the content */
