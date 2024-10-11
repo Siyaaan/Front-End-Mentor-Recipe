@@ -1,217 +1,209 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html body {
+body {
     background-color: hsl(30, 54%, 90%);
-    overflow-x: hidden;
-}
-
-div.parent {
-    display: flex;
-    justify-content: center; /* Horizontally centers the div */
-    align-items: center;     /* Vertically centers the div */
-    /* Full height of the viewport */ 
-    width: 100%;            /* Full width of the viewport */
-    margin: 0 auto;     /* Center the div */   /* Also make sure that the div doesnt go to the edge whenever we change the size*/
-    padding: 0 auto;    /* Center the div */ /* Also make sure that the div doesnt go to the edge whenever we change the size*/
-    padding-top: 100px;  /* Space from the top */
-    padding-bottom: 100px; /* Space from the bottom */
-}
-
-div.child {
-    padding: 30px;
-    background-color: hsl(30, 54%, 98%);
-    border-radius: 13px;
-    /*width: 45%;  /* Width of the content */
-    max-width: 650px;  /* Max width to prevent overflow */
-    margin: 0 auto; /* Center the div */ 
-}
-
-
-/* The content is here */
-.image {
-    border-radius: 13px;
-    margin-bottom:  20px;
-    width: 100%;/* Make sure the image is always wihtin the parent div and is responsive */
-    max-width: 100%;
-}
-
-.Heading {
-    font-family: 'Young Serif', sans-serif;
-    color: hsl(14, 45%, 36%);
+    font-family: Outfit;
+    font-size: 16px;
     font-weight: 400;
+    color: hsl(30, 10%, 34%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /*if you want to center the content vertically*/
+    padding: 20px;
 }
-#SimpleOmeletteRecipe {
+
+/* PARENT DIV // CONTAINER */
+
+.Parent {
+    background-color: white;
+    width: 700px;
+    margin: 20px 0;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+/* UNIVERSAL */
+.Heading {
+    font-family: Young serif;
+    font-weight: 100;
     color: black;
 }
 
-.Content {
-    font-family: "Outfit", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
+/* IMAGE */
+
+.image-container {
+    max-width: fit-content;
+    height: auto;
+    overflow: hidden;
+}
+.image{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
 }
 
-/*
-/* Preparation Time */
-.Preparation{
-    background-color: hsl(330, 100%, 98%);
-    border-radius: 10px;
-    padding: 20px; /* Space of all content inside the div */
-}   /* Body */
-#PreparationHeading {
-    color: hsl(332, 51%, 32%);
-    font-size: large;
-    font-weight: 650;
+
+
+/* INTRODUCTION */
+.Introduction {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.Introduction h1 {
     margin-bottom: 10px;
 }
-#PreparationList {
-    padding-left: 7%;
-    font-size: 16px;
-    text-indent: 20px;  /* Indent the text from the bullet*/
-    color: hsl(30, 10%, 34%);
+
+/* PREPARATION */
+.Preparation {
+    background-color:   hsl(330, 100%, 98%);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 20px;
 }
-#PreparationList ::marker { /* Change the bullet style, this also works for numbers etc. */
-    font-size: 12px;
+.Preparation h3 {
+    background-color: hsl(330, 100%, 98%);
     color: hsl(332, 51%, 32%);
+    margin-bottom: 10px;
+}
+.Preparation ul {
+    list-style-position: outside;
+    padding-left: 30px;
 }
 .Preparation li {
+    padding-left: 10px;
     margin-bottom: 10px;
 }
-
+.Preparation li::marker {
+    color: hsl(332, 51%, 32%);
+    font-size: 10px;
+}
 
 /* INGREDIENTS */
-.Ingredients{
-    padding-bottom: 30px;
-    padding-top: 30px;
-    
- }   /* Heading */
-.Ingredients h2{
-    margin-bottom: 10px;
-    margin-top: 10px;
-}   /* Body */
+.Ingredients {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}   
+.Ingredients h2 {
+    color: hsl(14, 45%, 36%);
+    margin-bottom: 20px;
+}   
 .Ingredients ul {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    border-bottom-width: 0.5px;
-    border-bottom-style: solid;
-    border-bottom-color: hsl(30, 18%, 87%);
-    font-size: 16px;
-    text-indent: 10px;  /* Indent the text from the bullet*/
-    color: hsl(30, 10%, 34%);
+    list-style-position: outside;
+    padding-left: 25px;
 }
-.Ingredients ul li {
+.Ingredients li {
+    padding-left: 10px;
     margin-bottom: 7px;
 }
-.Ingredients ul ::marker { /* Change the bullet style, this also works for numbers etc. */
-    font-size: 12px;
+.Ingredients li::marker {
     color: hsl(14, 45%, 36%);
+    font-size: 10px;
 }
 
-
+/* LINE */
+.line {
+    border: none;              /* Remove the default border */
+    height: 1px;               /* Thickness of the line */
+    background-color: hsl(30, 18%, 87%);      
+}
 /* INSTRUCTIONS */
-.Instructions {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
 
- }   /* Heading */
-.Instructions h2{
-    margin-bottom: 10px;
+.Instructions {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.Instructions h2 {
+    color: hsl(14, 45%, 36%);
+    margin-bottom: 20px;
 }
 .Instructions ol {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    border-bottom-width: 0.5px;
-    border-bottom-style: solid;
-    border-bottom-color: hsl(30, 18%, 87%);
-    font-size: 16px;
-    color: hsl(30, 10%, 34%);
-    list-style-position: outside ; /* Place the bullet outside the text  */
+    list-style-position: outside;
+    padding-left: 21px;
 }
-.Instructions ol li {
-    margin-bottom: 10px; /* Space between items */
-    padding-left: 15px; /* Space between bullet and text */
+.Instructions li {
+    padding-left: 14px;
+    margin-bottom: 7px;
 }
-.Instructions ol ::marker { /* Change the bullet style, this also works for numbers etc. */
+.Instructions li::marker {
     color: hsl(14, 45%, 36%);
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 700;
 }
-
 
 /* NUTRITION */
 .Nutrition {
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.Nutrition h2 {
+    color: hsl(14, 45%, 36%);
     margin-bottom: 20px;
-}   /* Heading */
-.Nutrition h2{
-    margin-bottom: 10px;
+}
+.Nutrition p {
+    margin-bottom: 20px;
 }
 .Nutrition #table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
 }
-.tablespoon {
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-bottom-width: 0.5px;
-    border-bottom-style: solid;
-    border-bottom-color: hsl(30, 18%, 87%);
-    text-align: left;
-    font-size: 16px;
+.Nutrition #table .tablespoon {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    padding-left: 32px;
+}
+.Nutrition #table .amount {
     color: hsl(14, 45%, 36%);
+    padding-left: 0px;
+    font-weight: 700;
 }
-.fat{
-    border-bottom: 0px;
-}
-.amount {
-    font-weight: bolder;
+.Nutrition #table .fat {
+    border: 0px;
 }
 
-@media screen and (max-width: 1500px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
+@media screen and (max-width: 700px) {
     body {
-        background-color: hsl(30, 54%, 90%);
-        overflow-x: hidden;
-    }
-    div.parent {
-        margin: 0px;
-        padding: 0px;
+        /* background-color: hsl(30, 54%, 90%);
+        font-family: Outfit;
+        font-size: 16px;
+        font-weight: 400;
+        color: hsl(30, 10%, 34%);
         display: flex;
-        justify-content: center; /* Horizontally centers the div */
-        align-items: center;
-        width: 100%;            /* Full width of the viewport */
-        }
-    
-    div.child {
-        padding: 0%;
-        background-color: hsl(30, 54%, 98%);
-        border-radius: 0%;
-        width: 100%;;  /* Width of the content */
-        max-width: 100%;  /* Max width to prevent overflow */
-        margin-left: 0%; /* Center the div */ 
+        justify-content: none;
+        align-items: none; */
+        min-height: 100vh; /*if you want to center the content vertically*/
+        padding: 0px;
     }
-    .image   {
-        max-width: 100%;
-        width: 100%;
+    
+    /* PARENT DIV // CONTAINER */
+    
+    .Parent {
+        background-color: white;
+        width: 700px;
+        margin: 0px;
+        border-radius: 0px;
+        padding: 0px;
+    }
+
+    .image-container {
+        padding: 0px;
+    }
+    .image{
+        padding: 0px;
         border-radius: 0px;
     }
-    .belowImage  {
-        padding-right: 30px;
-        padding-left: 30px;
+    .belowImage {
+        margin: 20px;
     }
 }
