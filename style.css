@@ -172,7 +172,7 @@ body {
     border: 0px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 375px) {
     body {
         /* background-color: hsl(30, 54%, 90%);
         font-family: Outfit;
